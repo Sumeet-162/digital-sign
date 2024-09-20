@@ -1,0 +1,85 @@
+
+.top, .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block, input, select, button {
+  width: 80%;
+}
+
+.top > .block {
+  margin: 10px;
+}
+
+.bottom > button {
+  margin: 10px;
+}
+
+.block > p {
+  margin: 10px auto;
+  width: 80%;
+}
+
+.canvas {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+body {
+  background-color: rgb(234, 233, 233);
+}
+
+/* Media query for devices with max-width of 350px */
+@media (max-width: 400px) {
+  .main {
+    padding: 10px;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .top, .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block, input, select, button {
+    width: 100%;
+  }
+
+  .canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom {
+    margin-top: 10px;
+  }
+
+  .bottom > button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .top > .block {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .block > p {
+    text-align: center;
+    width: 100%;
+  }
+}
